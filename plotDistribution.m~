@@ -19,7 +19,6 @@
 %epsF=zeros(1,length(indicesVect));
 
 delta=0.1;
-
 indicesVect= 1:length(indices);
 count=0;
 
@@ -32,7 +31,7 @@ X=-3:0.01:3;
 
 for i = indicesVect(end:-1:1)
     
-    eps=delta*cEps;
+    
     count=count+1;
     cEps=cEpsVect(indices(i));
     
@@ -78,14 +77,13 @@ for i = indicesVect(end:-1:1)
     
     f=zeros(1,length(X));
     for j =1:length(f)
-        if(abs(X(j))>= sqrt(2*delta*cEps) && abs(X(j))<= sqrt(2*cEps))
-             f(j)=GZp2(X(j));
-        elseif(abs(X(j))> sqrt(2*cEps))
+        if()
+        if(abs(X(j))> sqrt(2*cEps))
             f(j)=GZp1(X(j));
         elseif (abs(X(j))< sqrt(2*delta*cEps))
             f(j)= 1;
-       
-           
+        else
+            f(j)=GZp2(X(j));
         end
     end
     
