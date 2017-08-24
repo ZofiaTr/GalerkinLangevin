@@ -5,8 +5,8 @@
 cEpsVect=0.0:0.1:2.5;
 cd('Data');
 %cd('Results1')
-%indices=1:23;%
-indices=2:2:18;%length(cEpsVect)-1;
+indices=1:23;%
+%indices=2:2:18;%length(cEpsVect)-1;
 sg=zeros(1,length(indices));
 epsF=zeros(1,length(indices));
 
@@ -17,7 +17,7 @@ for i = indices
     
     count=count+1;
     load(['variance', num2str(i)]);
-    sg(count)=Lsorted(2);%spectralGap;
+    sg(count)=real(Lcomplex(2));%Lsorted(2);%spectralGap;
     epsF(count)=cEps;
     fprintf('epsF = %f\nvariance is %f\n', cEps, variance)
     vrc(count)=real(variance);
