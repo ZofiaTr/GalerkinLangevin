@@ -4,15 +4,17 @@ close all;
 
 %mkdir('Data')
 
-cEpsVect =[0.0 : 0.1 : 2.5 ];
+cEpsVect =[0.0 : 0.5 : 2 ];
 minEW = zeros(1, length(cEpsVect));
 countEps=0;
 
-parfor  countEps= 1:length(cEpsVect)
+%par
+for  countEps= 1:length(cEpsVect)
     
     cEps = cEpsVect(countEps);
     
-    computeSpectralGap(cEps, countEps);
+    %computeSpectralGap(cEps, countEps);
+    computeSpectralGapExp(cEps, countEps);
     %minEW(countEps) = Lsorted(2);
     
 end
