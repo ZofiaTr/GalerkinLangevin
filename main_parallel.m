@@ -5,7 +5,7 @@ close all;
 %mkdir('Data')
 cd('src')
 
-cEpsVect =[0.0 : 0.2 : 5];
+cEpsVect  =1.1:0.1:3;%[0.0 : 0.2 : 5];
 minEW = zeros(1, length(cEpsVect));
 countEps=0;
 
